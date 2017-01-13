@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>layout-flex</title>
+    <style type="text/css">
+        .tab-item1{
+            background: red;
+        }
+        .tab-item2{
+            background: yellow;
+        }
+        .tab-item3{
+            background: red;
+        }
+        .tab-item4{
+            background: yellow;
+        }
+        .tab-item5{
+            background: red;
+        }
+        .tab-item6{
+            background: yellow;
+        }
+
+        #tab1 .tab-item{
+            width: 33.33%;
+            float: left;
+            text-align: center;
+        }
+        #tab2{
+            display: flex;
+            display: -webkit-flex; /*safari*/
+            width: 100%;
+        }
+        #tab2 .tab-item{
+            flex: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>use 'float' of traditional method </h1>
+        <div id="tab1">
+            <div class="tab-item tab-item1">goods</div>
+            <div class="tab-item tab-item2">rating</div>
+            <div class="tab-item tab-item3">seller</div>
+        </div>
+        <h1>use 'flex' of modern method </h1>
+        <div id="tab2">
+            <div class="tab-item tab-item4">goods</div>
+            <div class="tab-item tab-item5">rating</div>
+            <div class="tab-item tab-item6">seller</div>
+        </div>
+    </div>
+</body>
+</html>
