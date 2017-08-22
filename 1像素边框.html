@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>layout-flex</title>
+    <style type="text/css">
+        #box, #box2 {
+            margin-top: 20px;
+            border-bottom: 1px solid #cccccc;
+        }
+        #box2 {
+            border-bottom: 0.3px solid #cccccc;
+        }
+        #box3 {
+            margin-top: 20px;
+        }
+        .border-1px{
+            position: relative;
+        }
+        /*原理就是通过伪类after来占据空间，然后利用媒体查询获取不同的dpr，来对空间进行不同比例的缩放*/
+        .border-1px:after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #cccccc;
+            color: red;
+            content: '';
+        }
+        @media(min-device-pixel-ratio: 1.5) {
+            .border-1px-adapter::after {
+                transform: scaleY(0.7);
+            }
+        }
+        @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+            .border-1px-adapter::after {
+                transform: scaleY(0.5);
+            }
+        }
+        @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+            .border-1px-adapter::after {
+                transform: scaleY(0.333);
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        console.log(window.devicePixelRatio);
+    </script>
+</head>
+<body>
+<div class="container">
+    <p>在pc端 1px和0.3px是看不出啥区别的</p>
+    <p>但是在移动端，由于dpr的作用，我们能够很轻易的看出二者之间的区别</p>
+    <div id="box">
+        1px pc版
+    </div>
+    <div id="box2">
+        0.3px pc版
+    </div>
+    <div id="box3" class="border-1px border-1px-adapter">
+        1px css 适配版
+    </div>
+</div>
+</body>
+</html>

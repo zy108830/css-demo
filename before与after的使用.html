@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>layout-flex</title>
+    <style type="text/css">
+        #more:after {
+            content: "\00A0\000BB";
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="well" style="margin-top: 100px">
+        <p>首先要明白一种思想：结构和样式分离。</p>
+        <p>结构和样式分离，就意味着：没有样式表，HTML文档也是一个完整的文档，没有样式表，也能正常阅读用HTML表达的所有内容。</p>
+        <p>明白这种思想就能很好理解就算没有:before 和 :after中的content，HTML文档也不会受到影响，HTML文档也是一个完整的文档;</p>
+        <p>所以，用简单的话来说： :before 和 :after中的content不过是对HTML的装潢，使HTML看起来更漂亮一些。</p>
+    </div>
+    <p>举个例子</p>
+    <a href="#"> 知道更多 </a>
+    <p>以上代码表示一个链接，点击就能打开，就算没有任何CSS修饰，也不影响打开链接。</p>
+    <p>但是，如果稍微修饰，这个链接就会看起来美观一些：</p>
+    <code>
+        a:after {
+           content: "\00A0\000BB";
+        }
+    </code>
+    <p>
+        <a id="more" href="#">知道更多</a>
+    </p>
+</div>
+</body>
+</html>
