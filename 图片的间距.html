@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="padding: 30px">
+    <p>当我们在一个div里面，放置图片和文字的时候，经常会出现如下问题:</p>
+    <ol>
+        <li>图片的底部与div之间存在缝隙</li>
+        <li>图片与它相邻的文字之间也存在缝隙</li>
+    </ol>
+    <div style="background-color:#e5edff;">
+        <img src="resources/images/react.png"> <span style="background-color: black;color: white">aaaa</span>
+    </div>
+    <p>问题1的原因在于图片默认设置了vertical-align=baseline，也就是基线对齐，基线就是文字的下边缘</p>
+    <p>因此解决问题1的方法一：设置图片vertical-align属性不为baseline</p>
+    <div style="background-color:#e5edff;">
+        <img src="resources/images/react.png" style="vertical-align: bottom">
+        <span style="background-color: black;color: white;">aaaa</span>
+    </div>
+    <p>由于基线是由line-height决定的</p>
+    <p>因此解决问题1的方法二：设置盒模型的line-height，改变基线</p>
+    <div style="background-color:#e5edff;">
+        <img src="resources/images/react.png"> aaaa
+    </div>
+    <p>解决问题2的方法就是设置图片的父元素font-size为0，然后再给图片父元素下的元素重新设置字体大小</p>
+    <script type="text/javascript">
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        #modal {
+            /*关键点*/
+            position: fixed;
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            /*end*/
+            top: 0;
+            left: 0;
+            /*background-color: rgb(7,17,27);*/
+            /*opacity: 0.8;*/
+            /*使用rgba，而不使用上述的写法，是因为此种写法的透明度不会相应改变子元素的透明度*/
+            background: rgba(7, 17, 27, 0.8)
+        }
+
+        #modal_content {
+            /*关键点2*/
+            min-height: 100%;
+            display: inline-block;
+            padding-bottom: 80px;
+            /*end*/
+        }
+
+        #modal_close_wrapper {
+            /*关键点3*/
+            position: relative;
+            margin-top: -55px;
+            /*end*/
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>经典问题：如何在内容较少的时候，弹窗的关闭按钮固定在底部，内容较多的时候，弹窗的关闭按钮可以随着内容的延展而推后</p>
+    <button id="display_modal" class="btn btn-primary">弹窗</button>
+    <div id="modal">
+        <div id="modal_content">
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+        </div>
+        <div id="modal_close_wrapper">
+            <span id="modal_close">X</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#display_modal').click(function () {
+        })
+    </script>
+</div>
+</body>
+</html>

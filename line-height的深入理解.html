@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="container" style="padding-top: 80px">
+    <p>css中起高度作用的应该就是height以及line-height了</p>
+    <p>当一个div没有设置高度的时候，我们在div里面输入一些文字，此时直接决定div高度的不是文字的font-size，而是div的line-height</p>
+    <p>测试1：font-size:20px; line-height:0;</p>
+    <p>测试2：font-size:0; line-height:20px;</p>
+    <div id="test" style="margin-top: 30px">
+        <div class="test1" style="font-size:20px; line-height:0; border:1px solid #cccccc; background:red;margin-bottom: 50px">测试1</div>
+        <div class="test2" style="font-size:0; line-height:20px; border:1px solid #cccccc; background:pink;margin-bottom: 50px">测试2</div>
+    </div>
+    <p>在inline box模型中，有着line boxes，这玩意是看不见的，这个玩意的工作就是包裹每行文字。它什么特性也没有，就只有高度</p>
+    <p>一行文字一个line boxes。例如“艾佛森退役”这5个字，如果它们在一行显示，你艾佛森再牛逼，对不起，只有一个line boxes罩着你；但“春哥纯爷们”这5个字，要是竖着写，一行一个，那真是够爷们，一个字罩着一个line boxes，于是总计五个line boxes。</p>
+    <p>所以一个没有设置height属性的div的高度就是由一个一个line boxes的高度堆积而成的，而line boxes的高度又是由其内部的文字，图片，span之类的标签决定的</p>
+    <p>因此这才会给我们造成一个错觉</p>
+    <hr/>
+    <p>由于盒模型里面的文字始终是居中于line-height的，因此，我们想让单行文字垂直居中的话，只需设置line-height等于文字所处的盒模型的高度即可，<span style="color: red">而无需多余地设置height属性</span></p>
+     <script type="text/javascript">
+
+    </script>
+</div>
+</body>
+</html>
