@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /*all就是所有属性，如果只想让width有过渡，就是transition:width 1s;*/
+            transition:all 1s;
+        }
+        #box:hover{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="well">
+        <a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html">CSS过渡简介</a>
+        <p>transition的优点在于简单易用，但是它有几个很大的局限。</p>
+        <p>（1）transition需要事件触发，所以没法在网页加载时自动发生。</p>
+        <p>（2）transition是一次性的，不能重复发生，除非一再触发。</p>
+        <p>（3）transition只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。</p>
+        <p>（4）一条transition规则，只能定义一个属性的变化，不能涉及多个属性。</p>
+        <p>CSS Animation就是为了解决这些问题而提出的。</p>
+    </div>
+    <div id="box">
+    </div>
+    <script type="text/javascript">
+    </script>
+</div>
+</body>
+</html>

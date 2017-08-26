@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        @keyframes move_horizontally {
+            from {
+                left: 0;
+            }
+            to {
+                left: 200px;
+            }
+        }
+
+        @keyframes color_change {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: green;
+            }
+        }
+
+        @keyframes move_horizontally {
+            from {
+                left: 0;
+            }
+            to {
+                left: 200px;
+            }
+        }
+
+        #box, #box2, #box3 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #box {
+            position: relative;
+            animation: move_horizontally 5s linear 1s 2 alternate;
+        }
+
+        #box2 {
+            animation: color_change 5s infinite;
+        }
+
+        #box3 {
+            position: relative;
+            animation: move_horizontally 5s linear;
+            animation-fill-mode: forwards
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="well">
+        <a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html">CSS动画简介</a>
+    </div>
+    <p>平行移动+反向重复1次</p>
+    <div id="box">
+    </div>
+    <p>色彩变换+无限次</p>
+    <div id="box2">
+    </div>
+    <p>平行移动+保持动画运行之后的状态</p>
+    <div id="box3">
+    </div>
+    <script type="text/javascript">
+    </script>
+</div>
+</body>
+</html>

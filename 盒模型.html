@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        #box_wrapper {
+            display: inline-block;
+            border: 1px solid #cccccc;
+        }
+
+        #box {
+            margin: 100px;
+            border: 100px solid red;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            background-color: black
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="padding-top: 30px">
+    <p>盒模型的宽高计算方式受box-sizing属性影响，默认值为border-box；</p>
+    <p>如果我们在css中，设置了元素的宽度，同时又设置了border与padding，那么border与padding就会蚕食我们设置的width</p>
+    <div class="well">
+        <p>一个盒模型的宽度=margin-left+border-left+padding-left+内容width+padding-right+border-right+margin-right</p>
+        <p>一个盒模型的宽度=style中的width(已含border、padding)+style中的margin</p>
+    </div>
+    <p>如果box-sizing属性的值为content-box，就意味着style中设置的width、height，仅仅是内容的width与height</p>
+    <p>一个元素的背景色影响到的范围是内容width+padding</p>
+    <div id="box_wrapper">
+        <div id="box">
+        </div>
+    </div>
+
+    <p>行内元素的盒模型</p>
+    <p>行内元素也是有盒模型的，但是有几点要注意：</p>
+    <p>1.对于非替换元素，比如a，span标签等</p>
+    <p>（1）可以设置margin-left和margin-right属性，无法设置margin-top和margin-bottom属性</p>
+    <p>（2）行内元素border和padding可以设置，但是border-top和padding-top到页面顶部后就不再增加</p>
+    <p>2.对于替换元素，比如input，img标签</p>
+    <p>margin，padding，border都有效果</p>
+    <script type="text/javascript">
+    </script>
+</div>
+</body>
+</html>

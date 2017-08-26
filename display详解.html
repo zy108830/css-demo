@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css"></style>
+</head>
+<body>
+<div class="container">
+    <div class="well">
+        块级元素
+        <ul>
+            <li>1.会另起一行,可以包含行内元素和其他块级元素</li>
+            <li>2.可以设置width，height，margin，padding，border属性</li>
+            <li>3.默认宽度是容器的100%</li>
+        </ul>
+    </div>
+    <div class="well">
+        行内元素
+        <ul>
+            <li>1.和其他元素在同一行内，只能包含数据和其他行内元素</li>
+            <li>2.高度和宽度就是内容的高度和宽度</li>
+            <li>3.可以设置margin-left和margin-right属性，无法设置margin-top和margin-bottom属性</li>
+            <li>4.border和padding可以设置，但是border-top和padding-top到页面顶部后就不再增加</li>
+        </ul>
+    </div>
+    <p>display:inline</p>
+    <img style="width: 500px;height: auto;" src="./resources/images/display-none.png" alt="">
+    <p>display:table</p>
+    <img style="width: 500px;height: auto;" src="./resources/images/display-table.png" alt="">
+    <p>默认的inline与block元素列表</p>
+    <img style="width: 500px;height: auto;margin-bottom: 50px" src="./resources/images/block-inline.png" alt="">
+    <script type="text/javascript">
+    </script>
+</div>
+</body>
+</html>
