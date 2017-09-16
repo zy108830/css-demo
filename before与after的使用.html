@@ -12,6 +12,20 @@
         #more:after {
             content: "\00A0\000BB";
         }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li:before{
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            background: url("./resources/images/correct.png") no-repeat;
+            background-size: 100% 100%;
+        }
     </style>
     <script type="text/javascript">
     </script>
@@ -36,6 +50,13 @@
     <p>
         <a id="more" href="#">知道更多</a>
     </p>
+    <ul>
+        <li>哈哈哈</li>
+        <li>哈哈哈</li>
+        <li>哈哈哈</li>
+        <li>哈哈哈</li>
+        <li>哈哈哈</li>
+    </ul>
 </div>
 </body>
 </html>

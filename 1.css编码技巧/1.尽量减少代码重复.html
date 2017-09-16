@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .btn-wrapper{
+            font-size: 16px;
+        }
+        #btn,#btn2,#btn3,#btn4,#btn5,#btn6{
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        #btn2,#btn3,#btn4,#btn5,#btn6{
+            line-height: 1.5;
+        }
+        #btn3,#btn4,#btn5,#btn6{
+            font-size: 125%;
+        }
+        #btn4,#btn5,#btn6{
+            padding: 0.3em 0.8em;
+            border-radius: 0.2em;
+            box-shadow: 0 0.05em 0.25em gray;
+            text-shadow: 0 -0.05em 0.05em #335166;
+        }
+        #btn5,#btn6{
+            background: #58a linear-gradient(hsla(0,0%,100%,0.2),transparent);
+            border: 1px solid rgba(0,0,0,.2);
+            box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+            text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+        }
+        #btn6{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>代码可维护性的最大要素是尽量减少 改动时要编辑的地方。当某些值相互依赖时，应该把 它们的相互关系用代码表达出来</li>
+        <li>当我们用em来表示font-size的大小时，它以父元素的font-size作为参考，当我们用em来表示其他属性时，它以自身元素的font-size作为参考</li>
+    </ul>
+    <p>完全写死原始版：<button id="btn">Yes!</button></p>
+    <p>重构一：行高与字号进行关联：<button id="btn2">Yes!</button></p>
+    <p>重构二：子元素字号与父元素字号进行关联：<span class="btn-wrapper"><button id="btn3">Yes!</button></span>
+    <p>重构三：盒模型相关属性与字号进行关联：<span class="btn-wrapper"><button id="btn4">Yes!</button></span>
+    <p>重构四：边框、阴影与主色调进行关联：<span class="btn-wrapper"><button id="btn5">Yes!</button><span class="btn-wrapper"><button id="btn6">Yes!</button></span>
+    <p>参考资料</p>
+    <ul>
+        <li><a href="https://www.w3.org/WAI/GL/css2em.htm" target="_blank">css em</a></li>
+    </ul>
+</body>
+</html>
