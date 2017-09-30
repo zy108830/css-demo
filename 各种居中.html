@@ -9,6 +9,7 @@
     <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <title></title>
     <style type="text/css">
+        /*水平居中*/
         #wrapper {
             background-color: green; /* for vizualization purposes */
             text-align: center;
@@ -17,13 +18,23 @@
             background-color: red; /* for vizualization purposes */
             display: inline-block;
         }
+        /*水平垂直居中*/
+        #correct{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div id="wrapper">
-        <div id="yourdiv">Your text</div>
+        <div id="yourdiv">水平居中</div>
     </div>
+    <img id="correct" src="./resources/images/correct.png" alt="">
     <script type="text/javascript">
 
     </script>
